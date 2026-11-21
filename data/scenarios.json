@@ -1,0 +1,71 @@
+[
+  {
+    "id": "apprentice",
+    "name": "The Baker's Apprentice",
+    "desc": "Only two kinds of machines allowed. Make bread count.",
+    "modifiers": [],
+    "effects": {
+      "max_machine_types": 2
+    },
+    "start_money": 120,
+    "goal": {
+      "type": "net_worth",
+      "target": 700,
+      "days": 14
+    }
+  },
+  {
+    "id": "dairy_dream",
+    "name": "Dairy Dream",
+    "desc": "You inherited a cow shed. Build a dairy empire.",
+    "modifiers": [],
+    "effects": {},
+    "start_money": 200,
+    "start_machines": {
+      "cowshed": 1
+    },
+    "goal": {
+      "type": "net_worth",
+      "target": 1400,
+      "days": 21
+    }
+  },
+  {
+    "id": "winter_is_coming",
+    "name": "Winter Is Coming",
+    "desc": "It is autumn. Prepare to survive the cold and come out ahead.",
+    "modifiers": [],
+    "effects": {},
+    "start_season": "autumn",
+    "start_money": 250,
+    "goal": {
+      "type": "net_worth",
+      "target": 1500,
+      "days": 21
+    },
+    "start_items": {
+      "cabbage_seed": 6,
+      "wheat_seed": 4
+    }
+  },
+  {
+    "id": "jam_session",
+    "name": "Jam Session",
+    "desc": "Strawberries only, and the weather is rough. Jam is your friend.",
+    "modifiers": [
+      "one_crop",
+      "harsh"
+    ],
+    "effects": {},
+    "start_season": "spring",
+    "start_money": 300,
+    "goal": {
+      "type": "net_worth",
+      "target": 800,
+      "days": 14
+    },
+    "start_items": {
+      "strawberry_seed": 8
+    }
+  }
+]

@@ -1,0 +1,3 @@
+[
+  {"id": "pickles", "machine": "kitchen", "inputs": {"radish": 3}, "outputs": {"pickles": 2}, "time": 12}
+]

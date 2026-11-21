@@ -1,0 +1,9 @@
+[
+  {"id": "sunny",    "name": "Sunny",    "growth_mult": 1.0,  "tint": "#00000000", "particles": ""},
+  {"id": "cloudy",   "name": "Cloudy",   "growth_mult": 0.9,  "tint": "#5a6a7a28", "particles": ""},
+  {"id": "rain",     "name": "Rain",     "growth_mult": 1.25, "tint": "#34507a3c", "particles": "rain"},
+  {"id": "storm",    "name": "Storm",    "growth_mult": 0.8,  "tint": "#1c2a4a60", "particles": "storm", "bad": true},
+  {"id": "heatwave", "name": "Heatwave", "growth_mult": 0.6,  "tint": "#ff8a1e30", "particles": "", "bad": true},
+  {"id": "frost",    "name": "Frost",    "growth_mult": 0.5,  "tint": "#a8d8ff30", "particles": "", "bad": true, "kills_sensitive": true},
+  {"id": "snow",     "name": "Snow",     "growth_mult": 0.4,  "tint": "#e8f4ff30", "particles": "snow"}
+]

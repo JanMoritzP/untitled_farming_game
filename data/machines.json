@@ -1,0 +1,10 @@
+[
+  {"id": "mill",       "name": "Mill",       "buy_cost": 220, "rent": 3, "color": "#b9a27a", "desc": "Grinds grain into flour and meal."},
+  {"id": "oven",       "name": "Bakery Oven","buy_cost": 300, "rent": 5, "color": "#c9633b", "desc": "Turns flour into bread, pies and cakes."},
+  {"id": "preserves",  "name": "Preserve Pot","buy_cost": 180, "rent": 3, "color": "#a83a4a", "desc": "Cooks fruit into jam."},
+  {"id": "kitchen",    "name": "Kitchen",    "buy_cost": 260, "rent": 4, "color": "#6a9ab8", "desc": "Fries, stews and other hot meals."},
+  {"id": "coop",       "name": "Chicken Coop","buy_cost": 200, "rent": 2, "color": "#d9a05b", "tags": ["animal"], "desc": "Hens turn feed into eggs."},
+  {"id": "cowshed",    "name": "Cow Shed",   "buy_cost": 350, "rent": 3, "color": "#8a6b4b", "tags": ["animal"], "desc": "Cows turn feed into milk."},
+  {"id": "dairy",      "name": "Dairy",      "buy_cost": 320, "rent": 4, "color": "#e8e0c8", "desc": "Churns milk into butter and cheese."},
+  {"id": "composter",  "name": "Composter",  "buy_cost": 90,  "rent": 1, "color": "#5a7a3a", "desc": "Turns waste straw into fertilizer."}
+]
