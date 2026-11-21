@@ -26,9 +26,9 @@ func _build() -> void:
 			row.add_child(UIKit.lbl("$%.1f each" % unit, UIKit.C_GOLD))
 			row.add_child(UIKit.lbl("demand %d%%" % pct, trend_color, 15))
 			row.add_child(UIKit.expander())
-			row.add_child(UIKit.btn("Sell 1", _sell.bind(k, 1)))
+			row.add_child(UIKit.btn_primary("Sell 1", _sell.bind(k, 1)))
 			if n > 1:
-				row.add_child(UIKit.btn("Sell all (%s)" % UIKit.money(st.sell_value(k, n)), _sell.bind(k, n)))
+				row.add_child(UIKit.btn_primary("Sell all (%s)" % UIKit.money(st.sell_value(k, n)), _sell.bind(k, n)))
 			v.add_child(row)
 		else:
 			v.add_child(UIKit.lbl("Not for sale" if db.items[id].get("category", "") == "seed" else "Used on the farm", UIKit.C_MUTED, 15))
@@ -39,4 +39,6 @@ func _build() -> void:
 
 
 func _sell(k: String, n: int) -> void:
-	st.sell(k, n)
+	var got := st.sell(k, n)
+	if got > 0 and screen != null and screen.has_method("fx_money"):
+		screen.fx_money(got)

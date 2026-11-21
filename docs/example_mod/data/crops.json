@@ -1,4 +1,18 @@
 [
-  {"id": "radish", "seed": "radish_seed", "yield_item": "radish", "yield": [4, 6], "grow_days": 1,
-   "seasons": ["spring", "autumn"], "fertility_cost": 0.08, "look": "ground"}
+  {
+    "id": "radish",
+    "seed": "radish_seed",
+    "yield_item": "radish",
+    "yield": [
+      4,
+      6
+    ],
+    "grow_days": 0.4,
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "fertility_cost": 0.08,
+    "look": "ground"
+  }
 ]

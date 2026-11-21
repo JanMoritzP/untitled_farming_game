@@ -20,7 +20,7 @@ func _build() -> void:
 		var seasons_text: Array = []
 		for s in c["seasons"]:
 			seasons_text.append(str(db.seasons[s]["name"]))
-		names.add_child(UIKit.lbl("%s  -  %d days" % [", ".join(seasons_text), int(c["grow_days"])],
+		names.add_child(UIKit.lbl("%s  -  %ds" % [", ".join(seasons_text), int(round(float(c["grow_days"]) * st.day_length))],
 				UIKit.C_GOOD if in_season else UIKit.C_BAD, 15))
 		names.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		top.add_child(names)
@@ -30,7 +30,7 @@ func _build() -> void:
 		buy_row.add_child(UIKit.lbl("$%d each" % price, UIKit.C_GOLD))
 		buy_row.add_child(UIKit.expander())
 		for n in [1, 5, 10]:
-			var b := UIKit.btn("Buy %d" % n, _buy.bind(seed, price, n))
+			var b := UIKit.btn_primary("Buy %d" % n, _buy.bind(seed, price, n))
 			b.disabled = st.money < price * n
 			buy_row.add_child(b)
 		v.add_child(buy_row)

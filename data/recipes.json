@@ -1,17 +1,174 @@
 [
-  {"id": "flour",        "machine": "mill",      "inputs": {"wheat": 3},                                   "outputs": {"flour": 2},        "time": 10},
-  {"id": "cornmeal",     "machine": "mill",      "inputs": {"corn": 3},                                    "outputs": {"cornmeal": 2},     "time": 10},
-  {"id": "bread",        "machine": "oven",      "inputs": {"flour": 2},                                   "outputs": {"bread": 2},        "time": 15},
-  {"id": "cornbread",    "machine": "oven",      "inputs": {"cornmeal": 2, "egg": 1},                      "outputs": {"cornbread": 2},    "time": 15},
-  {"id": "pumpkin_pie",  "machine": "oven",      "inputs": {"flour": 2, "pumpkin": 1},                     "outputs": {"pumpkin_pie": 1},  "time": 20},
-  {"id": "cake",         "machine": "oven",      "inputs": {"flour": 2, "egg": 2, "butter": 1, "jam": 1},  "outputs": {"cake": 2},         "time": 30},
-  {"id": "jam",          "machine": "preserves", "inputs": {"strawberry": 3},                              "outputs": {"jam": 2},          "time": 12},
-  {"id": "fries",        "machine": "kitchen",   "inputs": {"potato": 3},                                  "outputs": {"fries": 2},        "time": 10},
-  {"id": "stew",         "machine": "kitchen",   "inputs": {"cabbage": 2, "potato": 2},                    "outputs": {"stew": 3},         "time": 15},
-  {"id": "eggs_wheat",   "machine": "coop",      "inputs": {"wheat": 1},                                   "outputs": {"egg": 2},          "time": 20},
-  {"id": "eggs_straw",   "machine": "coop",      "inputs": {"straw": 2},                                   "outputs": {"egg": 1},          "time": 20},
-  {"id": "milk",         "machine": "cowshed",   "inputs": {"wheat": 2, "straw": 1},                       "outputs": {"milk": 2},         "time": 25},
-  {"id": "butter",       "machine": "dairy",     "inputs": {"milk": 2},                                    "outputs": {"butter": 1},       "time": 15},
-  {"id": "cheese",       "machine": "dairy",     "inputs": {"milk": 4},                                    "outputs": {"cheese": 1},       "time": 30},
-  {"id": "compost",      "machine": "composter", "inputs": {"straw": 3},                                   "outputs": {"compost": 1},      "time": 10}
+  {
+    "id": "flour",
+    "machine": "mill",
+    "inputs": {
+      "wheat": 3
+    },
+    "outputs": {
+      "flour": 2
+    },
+    "time": 5
+  },
+  {
+    "id": "cornmeal",
+    "machine": "mill",
+    "inputs": {
+      "corn": 3
+    },
+    "outputs": {
+      "cornmeal": 2
+    },
+    "time": 5
+  },
+  {
+    "id": "bread",
+    "machine": "oven",
+    "inputs": {
+      "flour": 2
+    },
+    "outputs": {
+      "bread": 2
+    },
+    "time": 8
+  },
+  {
+    "id": "cornbread",
+    "machine": "oven",
+    "inputs": {
+      "cornmeal": 2,
+      "egg": 1
+    },
+    "outputs": {
+      "cornbread": 2
+    },
+    "time": 8
+  },
+  {
+    "id": "pumpkin_pie",
+    "machine": "oven",
+    "inputs": {
+      "flour": 2,
+      "pumpkin": 1
+    },
+    "outputs": {
+      "pumpkin_pie": 1
+    },
+    "time": 10
+  },
+  {
+    "id": "cake",
+    "machine": "oven",
+    "inputs": {
+      "flour": 2,
+      "egg": 2,
+      "butter": 1,
+      "jam": 1
+    },
+    "outputs": {
+      "cake": 2
+    },
+    "time": 15
+  },
+  {
+    "id": "jam",
+    "machine": "preserves",
+    "inputs": {
+      "strawberry": 3
+    },
+    "outputs": {
+      "jam": 2
+    },
+    "time": 6
+  },
+  {
+    "id": "fries",
+    "machine": "kitchen",
+    "inputs": {
+      "potato": 3
+    },
+    "outputs": {
+      "fries": 2
+    },
+    "time": 5
+  },
+  {
+    "id": "stew",
+    "machine": "kitchen",
+    "inputs": {
+      "cabbage": 2,
+      "potato": 2
+    },
+    "outputs": {
+      "stew": 3
+    },
+    "time": 8
+  },
+  {
+    "id": "eggs_wheat",
+    "machine": "coop",
+    "inputs": {
+      "wheat": 1
+    },
+    "outputs": {
+      "egg": 2
+    },
+    "time": 10
+  },
+  {
+    "id": "eggs_straw",
+    "machine": "coop",
+    "inputs": {
+      "straw": 2
+    },
+    "outputs": {
+      "egg": 1
+    },
+    "time": 10
+  },
+  {
+    "id": "milk",
+    "machine": "cowshed",
+    "inputs": {
+      "wheat": 2,
+      "straw": 1
+    },
+    "outputs": {
+      "milk": 2
+    },
+    "time": 12
+  },
+  {
+    "id": "butter",
+    "machine": "dairy",
+    "inputs": {
+      "milk": 2
+    },
+    "outputs": {
+      "butter": 1
+    },
+    "time": 8
+  },
+  {
+    "id": "cheese",
+    "machine": "dairy",
+    "inputs": {
+      "milk": 4
+    },
+    "outputs": {
+      "cheese": 1
+    },
+    "time": 15
+  },
+  {
+    "id": "compost",
+    "machine": "composter",
+    "inputs": {
+      "straw": 3
+    },
+    "outputs": {
+      "compost": 1
+    },
+    "time": 5
+  }
 ]

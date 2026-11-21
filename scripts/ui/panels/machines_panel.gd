@@ -75,7 +75,7 @@ func _machine_card(mid: String) -> Control:
 		line.add_child(UIKit.expander())
 		line.add_child(UIKit.lbl("%ds" % int(r["time"]), UIKit.C_MUTED, 15))
 		for n in [1, 5]:
-			var b := UIKit.btn("x%d" % n, _queue.bind(mid, rid, n))
+			var b := UIKit.btn_primary("x%d" % n, _queue.bind(mid, rid, n))
 			var err := st.queue_error(mid, rid)
 			b.disabled = err != ""
 			if err != "":

@@ -31,7 +31,7 @@ func _run() -> void:
 	menu._show_setup()
 	await shot("02_setup")
 	var cfg := {"mode": "classic", "difficulty": "normal", "modifiers": [], "seed": 7,
-			"goal": {"type": "net_worth", "target": 1500, "days": 28}}
+			"goal": {"type": "net_worth", "target": 2200, "days": 28}}
 	menu.start_run.emit(cfg)
 	await get_tree().process_frame
 	var gs: GameScreen = main._current

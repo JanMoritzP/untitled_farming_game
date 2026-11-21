@@ -222,6 +222,7 @@ func _make_plots() -> void:
 				"fertility": 1.0, "last_crop": "", "paid": 0, "fee": 0})
 	var order: Array = range(COLS * ROWS)
 	order.sort_custom(func(a, b): return _center_dist(a) < _center_dist(b))
+	start_plots = mini(start_plots, max_plots())
 	for i in mini(start_plots, order.size()):
 		plots[order[i]]["state"] = "owned"
 
@@ -820,6 +821,12 @@ func _end_day() -> void:
 		_finish_run()   # before day_ended, so the summary knows the run is over
 	day_ended.emit(summary)
 	changed.emit()
+
+
+## Fast-forwards the rest of today (crops and machines keep running).
+func skip_to_evening() -> void:
+	if not waiting_next_day and not finished:
+		tick(day_length - day_time)
 
 
 func start_next_day() -> void:

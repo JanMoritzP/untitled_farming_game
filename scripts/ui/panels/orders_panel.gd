@@ -30,7 +30,7 @@ func _build() -> void:
 				UIKit.C_BAD if left <= 1 else UIKit.C_MUTED, 15))
 		row.add_child(UIKit.lbl("have %d" % st.count_item(o["item"], int(o["min_q"])), UIKit.C_MUTED, 15))
 		row.add_child(UIKit.expander())
-		var b := UIKit.btn("Deliver", _deliver.bind(i))
+		var b := UIKit.btn_primary("Deliver", _deliver.bind(i))
 		var err := st.order_error(i)
 		b.disabled = err != ""
 		if err != "":
@@ -41,6 +41,9 @@ func _build() -> void:
 
 
 func _deliver(i: int) -> void:
+	var reward: int = int(st.orders[i]["reward"]) if i < st.orders.size() else 0
 	var err := st.fulfill_order(i)
 	if err != "":
 		toast(err)
+	elif screen != null and screen.has_method("fx_money"):
+		screen.fx_money(reward)
