@@ -1,0 +1,10 @@
+[
+  {"id": "spring", "order": 0, "name": "Spring", "days": 7, "color": "#8fd16a",
+   "weather": {"sunny": 4, "cloudy": 3, "rain": 4, "storm": 1, "frost": 1}},
+  {"id": "summer", "order": 1, "name": "Summer", "days": 7, "color": "#f0c040",
+   "weather": {"sunny": 6, "cloudy": 2, "rain": 2, "storm": 1.5, "heatwave": 2}},
+  {"id": "autumn", "order": 2, "name": "Autumn", "days": 7, "color": "#d9822b",
+   "weather": {"sunny": 3, "cloudy": 4, "rain": 4, "storm": 1.5, "frost": 1.5}},
+  {"id": "winter", "order": 3, "name": "Winter", "days": 7, "color": "#a8d0e6",
+   "weather": {"cloudy": 3, "snow": 5, "frost": 3, "sunny": 2}}
+]

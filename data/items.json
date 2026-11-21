@@ -1,0 +1,34 @@
+[
+  {"id": "wheat_seed",      "name": "Wheat Seeds",      "category": "seed", "base_price": 1, "buy_price": 3,  "sellable": false, "color": "#e8c547", "shape": "packet", "desc": "Hardy grain seed. The backbone of any farm."},
+  {"id": "corn_seed",       "name": "Corn Seeds",       "category": "seed", "base_price": 1, "buy_price": 5,  "sellable": false, "color": "#f2d13a", "shape": "packet", "desc": "Tall stalks that love the summer sun."},
+  {"id": "potato_seed",     "name": "Potato Eyes",      "category": "seed", "base_price": 1, "buy_price": 4,  "sellable": false, "color": "#b98b55", "shape": "packet", "desc": "Plant them in spring or autumn."},
+  {"id": "strawberry_seed", "name": "Strawberry Plants","category": "seed", "base_price": 1, "buy_price": 9,  "sellable": false, "color": "#d9363e", "shape": "packet", "tags": ["sweet"], "desc": "Delicate and sweet. Frost will ruin them."},
+  {"id": "pumpkin_seed",    "name": "Pumpkin Seeds",    "category": "seed", "base_price": 1, "buy_price": 10, "sellable": false, "color": "#e8812a", "shape": "packet", "desc": "Slow to grow, worth the wait."},
+  {"id": "cabbage_seed",    "name": "Cabbage Seeds",    "category": "seed", "base_price": 1, "buy_price": 6,  "sellable": false, "color": "#79b865", "shape": "packet", "desc": "Tough enough to survive the winter."},
+
+  {"id": "wheat",      "name": "Wheat",      "category": "crop", "base_price": 5,  "color": "#e8c547", "shape": "grain",  "tags": [], "desc": "Golden grain. Mill it into flour for far better money."},
+  {"id": "corn",       "name": "Corn",       "category": "crop", "base_price": 7,  "color": "#f2d13a", "shape": "cob",    "tags": [], "desc": "Sweet kernels, or grind them into meal."},
+  {"id": "potato",     "name": "Potato",     "category": "crop", "base_price": 6,  "color": "#b98b55", "shape": "round",  "tags": [], "desc": "Humble, versatile, and always in demand."},
+  {"id": "strawberry", "name": "Strawberry", "category": "crop", "base_price": 10, "color": "#d9363e", "shape": "berry",  "tags": ["sweet", "perishable"], "season_demand": {"summer": 1.25}, "desc": "Fragile and sweet. Turn them into jam before they spoil."},
+  {"id": "pumpkin",    "name": "Pumpkin",    "category": "crop", "base_price": 26, "color": "#e8812a", "shape": "pumpkin","tags": [], "season_demand": {"autumn": 1.3}, "desc": "Big, orange, and valuable."},
+  {"id": "cabbage",    "name": "Cabbage",    "category": "crop", "base_price": 11, "color": "#79b865", "shape": "leaf",   "tags": [], "desc": "Crisp and cold-hardy."},
+
+  {"id": "straw",   "name": "Straw",   "category": "byproduct", "base_price": 2, "color": "#d8b95a", "shape": "bundle", "tags": ["byproduct"], "desc": "Left over from harvesting grain. Feed it to animals or compost it."},
+  {"id": "compost", "name": "Compost", "category": "byproduct", "base_price": 0, "sellable": false, "color": "#6b4a2b", "shape": "pile", "tags": [], "desc": "Rich fertilizer. Use it on a plot to restore fertility."},
+
+  {"id": "egg",    "name": "Egg",    "category": "animal", "base_price": 6,  "color": "#f6ecd2", "shape": "egg",    "tags": ["animal", "perishable"], "desc": "Fresh from the coop."},
+  {"id": "milk",   "name": "Milk",   "category": "animal", "base_price": 9,  "color": "#f4f4f4", "shape": "bottle", "tags": ["animal", "perishable"], "desc": "Creamy and fresh."},
+  {"id": "butter", "name": "Butter", "category": "dairy",  "base_price": 24, "color": "#f7dc6f", "shape": "block",  "tags": ["animal"], "desc": "Churned from milk. Bakers love it."},
+  {"id": "cheese", "name": "Cheese", "category": "dairy",  "base_price": 52, "color": "#f0b84a", "shape": "block",  "tags": ["animal"], "season_demand": {"winter": 1.25}, "desc": "Aged to perfection."},
+
+  {"id": "flour",     "name": "Flour",     "category": "ingredient", "base_price": 9,  "color": "#f1ead6", "shape": "sack", "tags": [], "desc": "Finely milled wheat."},
+  {"id": "cornmeal",  "name": "Cornmeal",  "category": "ingredient", "base_price": 12, "color": "#f2d97a", "shape": "sack", "tags": [], "desc": "Ground corn."},
+
+  {"id": "bread",       "name": "Bread",         "category": "food", "base_price": 19, "color": "#c98a4b", "shape": "loaf", "tags": ["bakery"], "desc": "A warm, golden loaf. The classic."},
+  {"id": "cornbread",   "name": "Cornbread",     "category": "food", "base_price": 24, "color": "#e3b84d", "shape": "loaf", "tags": ["bakery"], "desc": "Crumbly and buttery-looking."},
+  {"id": "pumpkin_pie", "name": "Pumpkin Pie",   "category": "food", "base_price": 72, "color": "#d9893a", "shape": "pie",  "tags": ["bakery", "sweet"], "season_demand": {"autumn": 1.4}, "desc": "The taste of autumn."},
+  {"id": "cake",        "name": "Berry Cake",    "category": "food", "base_price": 95, "color": "#e86a8a", "shape": "cake", "tags": ["bakery", "sweet"], "desc": "The crown jewel of any bakery."},
+  {"id": "jam",         "name": "Strawberry Jam","category": "food", "base_price": 22, "color": "#b8243a", "shape": "jar",  "tags": ["sweet"], "season_demand": {"winter": 1.2}, "desc": "Summer in a jar."},
+  {"id": "fries",       "name": "Fries",         "category": "food", "base_price": 16, "color": "#f2c94c", "shape": "fries","tags": [], "desc": "Crispy golden sticks."},
+  {"id": "stew",        "name": "Veggie Stew",   "category": "food", "base_price": 24, "color": "#b0733a", "shape": "bowl", "tags": [], "season_demand": {"winter": 1.4, "autumn": 1.15}, "desc": "Hearty and warming."}
+]

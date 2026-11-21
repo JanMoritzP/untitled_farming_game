@@ -1,0 +1,4 @@
+[
+  {"id": "radish_rush", "name": "Radish Rush", "desc": "Crops grow twice as fast, but everything sells for 30% less.",
+   "score_mult": 1.05, "effects": {"growth_mult": 2.0, "price_mult": 0.7}}
+]

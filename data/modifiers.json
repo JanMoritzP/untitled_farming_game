@@ -1,0 +1,17 @@
+[
+  {"id": "vegan",       "name": "Vegan Farm",       "desc": "No animals, no eggs, no dairy.",                                 "score_mult": 1.15, "effects": {"ban_tags": ["animal"]}},
+  {"id": "one_machine", "name": "One Machine",      "desc": "You may only ever use a single type of machine.",                "score_mult": 1.25, "effects": {"max_machine_types": 1}},
+  {"id": "renters",     "name": "Renter's Life",    "desc": "You cannot buy machines or land. Lease everything.",              "score_mult": 1.25, "effects": {"no_machine_buy": true, "no_plot_buy": true}},
+  {"id": "tiny_plot",   "name": "Boutique Farm",    "desc": "At most 6 plots, but customers pay 40% more.",                   "score_mult": 1.15, "effects": {"max_plots": 6, "price_mult": 1.4}},
+  {"id": "one_crop",    "name": "Single Crop Season","desc": "Only one crop type may be planted each season.",                "score_mult": 1.2,  "effects": {"one_crop_per_season": true}},
+  {"id": "zero_waste",  "name": "Zero Waste",       "desc": "Unsold byproducts cost you $1 each at the end of every day.",    "score_mult": 1.15, "effects": {"waste_fee": 1.0}},
+  {"id": "hurried",     "name": "Hurried",          "desc": "Days are 40% shorter. Crops still take the same number of days.", "score_mult": 1.2,  "effects": {"time_mult": 0.6}},
+  {"id": "harsh",       "name": "Harsh Weather",    "desc": "Storms, frost and heatwaves are twice as likely.",               "score_mult": 1.15, "effects": {"harshness_mult": 2.0}},
+  {"id": "cheap",       "name": "Cheap Customers",  "desc": "Everything sells for 20% less, but you start with double money.","score_mult": 1.1,  "effects": {"price_mult": 0.8, "start_money_mult": 2.0}},
+  {"id": "blind",       "name": "Blind Farmer",     "desc": "No weather forecast.",                                           "score_mult": 1.1,  "effects": {"no_forecast": true}},
+  {"id": "no_fridge",   "name": "No Fridge",        "desc": "Perishable goods spoil quickly overnight.",                      "score_mult": 1.15, "effects": {"spoilage_rate": 0.15}},
+  {"id": "tired_soil",  "name": "Tired Soil",       "desc": "Harvesting drains soil fertility twice as fast.",                "score_mult": 1.15, "effects": {"fertility_loss_mult": 2.0}},
+  {"id": "free_market", "name": "Free Market",      "desc": "No contracts, and prices swing wildly and recover slowly.",      "score_mult": 1.2,  "effects": {"no_orders": true, "demand_recovery_mult": 0.5}},
+  {"id": "no_bakery",   "name": "Bread is Banned",  "desc": "Nothing from the bakery: no bread, pies or cakes.",              "score_mult": 1.15, "effects": {"ban_tags": ["bakery"]}},
+  {"id": "no_sweets",   "name": "No Sweet Tooth",   "desc": "Strawberries, jam, pies and cakes are all off the menu.",        "score_mult": 1.1,  "effects": {"ban_tags": ["sweet"]}}
+]

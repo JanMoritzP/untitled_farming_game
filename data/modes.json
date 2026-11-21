@@ -1,0 +1,56 @@
+[
+  {
+    "id": "classic",
+    "name": "The First Year",
+    "desc": "Reach a net worth goal within one year (28 days).",
+    "goal": {
+      "type": "net_worth",
+      "target": 1500,
+      "days": 28
+    }
+  },
+  {
+    "id": "sprint",
+    "name": "Sprint",
+    "desc": "A quick two-week dash. Short goal, short patience.",
+    "goal": {
+      "type": "net_worth",
+      "target": 950,
+      "days": 14
+    }
+  },
+  {
+    "id": "marathon",
+    "name": "Three Years",
+    "desc": "A long game. Build an empire over 84 days.",
+    "goal": {
+      "type": "net_worth",
+      "target": 5000,
+      "days": 84
+    }
+  },
+  {
+    "id": "endless",
+    "name": "Endless",
+    "desc": "No goal, no end. Farm as long as you like.",
+    "goal": null
+  },
+  {
+    "id": "scenario",
+    "name": "Scenarios",
+    "desc": "Hand-crafted puzzles with fixed rules and goals.",
+    "goal": null,
+    "special": "scenario"
+  },
+  {
+    "id": "daily",
+    "name": "Daily Farm",
+    "desc": "Same seed and challenges for everyone today.",
+    "goal": {
+      "type": "net_worth",
+      "target": 1500,
+      "days": 28
+    },
+    "special": "daily"
+  }
+]
