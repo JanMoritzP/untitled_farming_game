@@ -16,7 +16,8 @@ Built with **Godot 4.3** (GDScript, GL Compatibility renderer, pixel art).
 ## How it plays
 
 * A **real-time day timer** ticks down; when it runs out the day ends and you get a summary.
-  Speed up with 2x/3x. Cozy difficulty lets you pause.
+  Speed up with 2x/4x or hit **Skip** to fast-forward to evening. Cozy difficulty lets you pause.
+  Days are short (Normal: 90s) and crops grow in under a minute to a couple of minutes.
 * **Plots**: click a locked plot to lease it (per season, auto-renews) or buy it.
   Select seeds on the toolbar, then click or **drag** across empty plots. Click ripe crops to harvest.
 * **Seasons and weather**: crops only grow in their seasons and wither if the season ends first.
@@ -84,5 +85,6 @@ Art is optional: icons are generated from `color` and `shape`, or drop a PNG at
 
 ## Art and fonts
 
-All art is generated procedurally as placeholder pixel art. To use a pixel font, put a TTF at
-`assets/fonts/pixel.ttf` and it is picked up automatically.
+All sprites are generated procedurally as placeholder pixel art (drop PNGs in `assets/items/` to replace them).
+Fonts: Pixelify Sans for text and a digits/symbols subset of Silkscreen for numbers (clearer than Pixelify's
+digits), both under the SIL Open Font License (`assets/fonts/OFL.txt`).

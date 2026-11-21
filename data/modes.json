@@ -5,7 +5,7 @@
     "desc": "Reach a net worth goal within one year (28 days).",
     "goal": {
       "type": "net_worth",
-      "target": 1500,
+      "target": 2200,
       "days": 28
     }
   },
@@ -15,7 +15,7 @@
     "desc": "A quick two-week dash. Short goal, short patience.",
     "goal": {
       "type": "net_worth",
-      "target": 950,
+      "target": 1200,
       "days": 14
     }
   },
@@ -25,7 +25,7 @@
     "desc": "A long game. Build an empire over 84 days.",
     "goal": {
       "type": "net_worth",
-      "target": 5000,
+      "target": 4500,
       "days": 84
     }
   },
@@ -48,7 +48,7 @@
     "desc": "Same seed and challenges for everyone today.",
     "goal": {
       "type": "net_worth",
-      "target": 1500,
+      "target": 2200,
       "days": 28
     },
     "special": "daily"

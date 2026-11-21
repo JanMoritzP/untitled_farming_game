@@ -56,7 +56,7 @@ func _show_title() -> void:
 	panel.add_theme_stylebox_override("panel", UIKit.box(UIKit.C_PANEL, UIKit.C_BORDER, 4, 40, 30))
 	var v := UIKit.vb(12)
 	panel.add_child(v)
-	var title := UIKit.lbl("Untitled Farming Game", UIKit.C_BORDER, 44)
+	var title := UIKit.pop_lbl("Untitled Farming Game", Color("#ffd23a"), 54, 10)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	v.add_child(title)
 	var sub := UIKit.lbl("Grow it. Mill it. Bake it. Sell it.", UIKit.C_MUTED, 20)
@@ -65,9 +65,16 @@ func _show_title() -> void:
 	var icons := UIKit.hb(10)
 	icons.alignment = BoxContainer.ALIGNMENT_CENTER
 	for id in ["wheat", "flour", "bread", "strawberry", "jam", "cake"]:
-		icons.add_child(UIKit.icon(PixelArt.item_texture(db, id, 4), 56))
+		var ic := UIKit.icon(PixelArt.item_texture(db, id, 4), 64)
+		icons.add_child(ic)
+		var tw := ic.create_tween().set_loops()
+		var delay := float(icons.get_child_count()) * 0.12
+		tw.tween_interval(delay)
+		tw.tween_property(ic, "position:y", -8.0, 0.35).as_relative().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		tw.tween_property(ic, "position:y", 8.0, 0.35).as_relative().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+		tw.tween_interval(1.2)
 	v.add_child(icons)
-	var cont := UIKit.btn("Continue", func(): continue_run.emit())
+	var cont := UIKit.btn_primary("Continue", func(): continue_run.emit())
 	cont.disabled = not Game.has_save()
 	cont.custom_minimum_size = Vector2(300, 44)
 	v.add_child(cont)
@@ -183,7 +190,7 @@ func _show_setup() -> void:
 	outer.add_child(buttons)
 	buttons.add_child(UIKit.btn("Back", _show_title))
 	buttons.add_child(UIKit.expander())
-	var go := UIKit.btn("Start farming", _start)
+	var go := UIKit.btn_primary("Start farming", _start)
 	go.custom_minimum_size = Vector2(220, 44)
 	buttons.add_child(go)
 	_swap(panel)

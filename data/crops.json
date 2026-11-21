@@ -1,8 +1,111 @@
 [
-  {"id": "wheat",      "seed": "wheat_seed",      "yield_item": "wheat",      "yield": [3, 4], "grow_days": 2, "seasons": ["spring", "summer", "autumn"], "fertility_cost": 0.12, "look": "tall",   "byproduct": {"straw": [1, 2]}},
-  {"id": "corn",       "seed": "corn_seed",       "yield_item": "corn",       "yield": [3, 4], "grow_days": 3, "seasons": ["summer", "autumn"],           "fertility_cost": 0.16, "look": "tall",   "byproduct": {"straw": [1, 2]}},
-  {"id": "potato",     "seed": "potato_seed",     "yield_item": "potato",     "yield": [4, 5], "grow_days": 3, "seasons": ["spring", "autumn"],           "fertility_cost": 0.14, "look": "bush"},
-  {"id": "strawberry", "seed": "strawberry_seed", "yield_item": "strawberry", "yield": [4, 5], "grow_days": 3, "seasons": ["spring", "summer"],          "fertility_cost": 0.18, "look": "bush",   "frost_sensitive": true},
-  {"id": "pumpkin",    "seed": "pumpkin_seed",    "yield_item": "pumpkin",    "yield": [2, 3], "grow_days": 4, "seasons": ["autumn"],                    "fertility_cost": 0.2,  "look": "ground"},
-  {"id": "cabbage",    "seed": "cabbage_seed",    "yield_item": "cabbage",    "yield": [3, 4], "grow_days": 3, "seasons": ["autumn", "winter"],          "fertility_cost": 0.12, "look": "ground"}
+  {
+    "id": "wheat",
+    "seed": "wheat_seed",
+    "yield_item": "wheat",
+    "yield": [
+      3,
+      4
+    ],
+    "grow_days": 0.5,
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "fertility_cost": 0.12,
+    "look": "tall",
+    "byproduct": {
+      "straw": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "corn",
+    "seed": "corn_seed",
+    "yield_item": "corn",
+    "yield": [
+      3,
+      4
+    ],
+    "grow_days": 1,
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "fertility_cost": 0.16,
+    "look": "tall",
+    "byproduct": {
+      "straw": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "potato",
+    "seed": "potato_seed",
+    "yield_item": "potato",
+    "yield": [
+      4,
+      5
+    ],
+    "grow_days": 0.8,
+    "seasons": [
+      "spring",
+      "autumn"
+    ],
+    "fertility_cost": 0.14,
+    "look": "bush"
+  },
+  {
+    "id": "strawberry",
+    "seed": "strawberry_seed",
+    "yield_item": "strawberry",
+    "yield": [
+      4,
+      5
+    ],
+    "grow_days": 1,
+    "seasons": [
+      "spring",
+      "summer"
+    ],
+    "fertility_cost": 0.18,
+    "look": "bush",
+    "frost_sensitive": true
+  },
+  {
+    "id": "pumpkin",
+    "seed": "pumpkin_seed",
+    "yield_item": "pumpkin",
+    "yield": [
+      2,
+      3
+    ],
+    "grow_days": 1.5,
+    "seasons": [
+      "autumn"
+    ],
+    "fertility_cost": 0.2,
+    "look": "ground"
+  },
+  {
+    "id": "cabbage",
+    "seed": "cabbage_seed",
+    "yield_item": "cabbage",
+    "yield": [
+      3,
+      4
+    ],
+    "grow_days": 1,
+    "seasons": [
+      "autumn",
+      "winter"
+    ],
+    "fertility_cost": 0.12,
+    "look": "ground"
+  }
 ]

@@ -68,11 +68,11 @@ func test_farming() -> void:
 	for i in s.plots.size():
 		if s.plots[i].state == "owned":
 			owned.append(i)
-	check(owned.size() == 4, "4 starting plots")
+	check(owned.size() == 6, "6 starting plots")
 	check(s.plant(owned[0], "wheat") == "", "plant wheat")
 	check(s.plant(owned[0], "wheat") != "", "can't double plant")
 	check(s.plant(owned[1], "pumpkin") != "", "pumpkin out of season / no seeds")
-	check(s.count_item("wheat_seed") == 5, "seed consumed")
+	check(s.count_item("wheat_seed") == 11, "seed consumed")
 	var guard := 0
 	while not s.plots[owned[0]].ready and guard < 5000:
 		s.tick(1.0)
@@ -106,19 +106,19 @@ func test_machines() -> void:
 	s._add_item("wheat", 6)
 	check(s.queue_job("mill", "flour", 5) == 2, "queues 2 batches (6 wheat, 3 per batch)")
 	check(s.money == 250 - 2 * s.machine_rent("mill"), "rent paid per batch")
-	for i in 11:
+	for i in 6:
 		s.tick(1.0)
-	check(s.count_item("flour") == 2, "mill runs one batch at a time (2 flour after 11s)")
-	for i in 10:
+	check(s.count_item("flour") == 2, "mill runs one batch at a time (2 flour after 6s)")
+	for i in 5:
 		s.tick(1.0)
-	check(s.count_item("flour") == 4, "second batch done after 21s")
+	check(s.count_item("flour") == 4, "second batch done after 11s")
 	s.money = 1000
 	check(s.buy_machine("mill") == "", "buy mill")
 	s._add_item("wheat", 9)
 	var before := s.money
 	check(s.queue_job("mill", "flour", 3) == 3, "owned machine queues")
 	check(s.money == before, "owned machine has no rent")
-	for i in 11:
+	for i in 6:
 		s.tick(1.0)
 	check(s.count_item("flour") == 4 + 2, "owned mill ran first batch")
 	s.buy_machine("mill")
@@ -289,7 +289,7 @@ func test_modifiers() -> void:
 	var fm := FarmState.create(db, cfg({"modifiers": ["free_market"]}), Journal.new())
 	check(fm.orders.is_empty(), "free market has no orders")
 	var h := FarmState.create(db, cfg({"modifiers": ["hurried"]}), Journal.new())
-	check(is_equal_approx(h.day_length, 108.0), "hurried shortens the day")
+	check(is_equal_approx(h.day_length, 54.0), "hurried shortens the day")
 	# scenarios
 	for sid in db.scenarios:
 		var sc := FarmState.create(db, cfg({"mode": "scenario", "scenario": sid, "goal": db.scenarios[sid].goal}), Journal.new())

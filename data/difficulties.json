@@ -3,15 +3,15 @@
     "id": "cozy",
     "name": "Cozy",
     "desc": "Long days, you can pause, cheap rent, kind weather.",
-    "day_length": 300,
+    "day_length": 150,
     "start_money": 400,
-    "start_plots": 6,
+    "start_plots": 8,
     "allow_pause": true,
     "goal_mult": 0.7,
     "score_mult": 0.8,
     "start_items": {
-      "wheat_seed": 8,
-      "potato_seed": 6
+      "wheat_seed": 16,
+      "potato_seed": 10
     },
     "effects": {
       "rent_mult": 0.5,
@@ -23,15 +23,15 @@
     "id": "normal",
     "name": "Normal",
     "desc": "The intended experience. The clock never stops.",
-    "day_length": 180,
+    "day_length": 90,
     "start_money": 250,
-    "start_plots": 4,
+    "start_plots": 6,
     "allow_pause": false,
     "goal_mult": 1.0,
     "score_mult": 1.0,
     "start_items": {
-      "wheat_seed": 6,
-      "potato_seed": 4
+      "wheat_seed": 12,
+      "potato_seed": 8
     },
     "effects": {}
   },
@@ -39,15 +39,15 @@
     "id": "hard",
     "name": "Hard",
     "desc": "Short days, pricey rent, spoilage and nasty weather.",
-    "day_length": 120,
+    "day_length": 60,
     "start_money": 150,
-    "start_plots": 3,
+    "start_plots": 4,
     "allow_pause": false,
     "goal_mult": 1.2,
     "score_mult": 1.4,
     "start_items": {
-      "wheat_seed": 5,
-      "potato_seed": 3
+      "wheat_seed": 8,
+      "potato_seed": 5
     },
     "effects": {
       "rent_mult": 1.3,

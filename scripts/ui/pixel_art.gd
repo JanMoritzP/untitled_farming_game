@@ -5,9 +5,9 @@ extends RefCounted
 ## res://assets/items/<id>.png (or res://assets/machines/<id>.png) to override.
 
 const OUTLINE := Color("#4a3322")
-const GREEN := Color("#5fae48")
-const LEAF := Color("#6dbf4b")
-const STEM := Color("#4f8f3a")
+const GREEN := Color("#4fd04a")
+const LEAF := Color("#5ae04a")
+const STEM := Color("#2e9a3a")
 const BROWN := Color("#8a5a2b")
 const CREAM := Color("#f4e8c8")
 
@@ -59,7 +59,7 @@ static func soil_texture(level: int, variant: int) -> Texture2D:
 	var ck := "soil:%d:%d" % [level, variant]
 	if _cache.has(ck):
 		return _cache[ck]
-	var base := Color("#b08a5b").lerp(Color("#5e3d22"), float(level) / 4.0)
+	var base := Color("#d9a566").lerp(Color("#8a4f26"), float(level) / 4.0)
 	var img := _blank(24, 24)
 	for y in 24:
 		for x in 24:
@@ -80,18 +80,63 @@ static func soil_texture(level: int, variant: int) -> Texture2D:
 static func grass_tile() -> Texture2D:
 	if _cache.has("grass"):
 		return _cache["grass"]
-	var base := Color("#78b35d")
-	var img := _blank(16, 16)
-	for y in 16:
-		for x in 16:
+	var base := Color("#7fdc5a")
+	var img := _blank(32, 32)
+	for y in 32:
+		for x in 32:
 			var h: int = ((x * 2654435761) ^ (y * 40503) ^ 7919) & 255
 			var c := base
-			if h < 30:
-				c = base.darkened(0.1)
-			elif h > 235:
-				c = base.lightened(0.12)
+			if h < 26:
+				c = base.darkened(0.12)
+			elif h > 232:
+				c = base.lightened(0.18)
 			img.set_pixel(x, y, c)
+	# grass tufts and a few flowers
+	var tufts := [Vector2(4, 6), Vector2(20, 3), Vector2(13, 17), Vector2(27, 22), Vector2(7, 27), Vector2(24, 12)]
+	for t in tufts:
+		var d := base.darkened(0.28)
+		_px(img, int(t.x), int(t.y), d)
+		_px(img, int(t.x) + 1, int(t.y) - 1, d)
+		_px(img, int(t.x) + 2, int(t.y), d)
+	var flowers := [[Vector2(10, 9), Color("#ffffff")], [Vector2(26, 6), Color("#ffe14a")], [Vector2(17, 26), Color("#ff7aa8")],
+			[Vector2(3, 18), Color("#ffe14a")]]
+	for f in flowers:
+		var fp: Vector2 = f[0]
+		var c: Color = f[1]
+		_px(img, int(fp.x), int(fp.y) - 1, c)
+		_px(img, int(fp.x) - 1, int(fp.y), c)
+		_px(img, int(fp.x) + 1, int(fp.y), c)
+		_px(img, int(fp.x), int(fp.y) + 1, c)
+		_px(img, int(fp.x), int(fp.y), Color("#ffb020"))
 	return _store("grass", img, 4)
+
+
+static func coin_texture(scale: int = 2) -> Texture2D:
+	var ck := "coin:%d" % scale
+	if _cache.has(ck):
+		return _cache[ck]
+	var img := _blank(16, 16)
+	_ell(img, 8, 8, 6.0, 6.0, Color("#ffcc1f"))
+	_ell(img, 8, 8, 3.6, 3.6, Color("#f2a100"))
+	_rect(img, 7, 5, 2, 6, Color("#ffe27a"))
+	_finish(img)
+	return _store(ck, img, scale)
+
+
+static func sparkle_texture() -> Texture2D:
+	if _cache.has("sparkle"):
+		return _cache["sparkle"]
+	var img := _blank(7, 7)
+	var c := Color("#fff6a8")
+	for i in 7:
+		_px(img, 3, i, c)
+		_px(img, i, 3, c)
+	_px(img, 3, 3, Color.WHITE)
+	_px(img, 2, 2, c)
+	_px(img, 4, 2, c)
+	_px(img, 2, 4, c)
+	_px(img, 4, 4, c)
+	return _store("sparkle", img, 3)
 
 
 static func crop_texture(db: ContentDB, cid: String, stage: int) -> Texture2D:
